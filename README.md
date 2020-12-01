@@ -21,7 +21,7 @@ Extremely basic knowledge of any programming language. We are going to use code 
 
 ## Setup
 
-Open [Makecode](https://makecode.microbit.org/) and click on :heavy_plus_symbol:`New Project`.
+Open [Makecode](https://makecode.microbit.org/) and click on :heavy_plus_sign:`New Project`.
 
 ![Setup]()
 
