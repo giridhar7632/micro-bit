@@ -5,7 +5,7 @@ author: '@giridhar7632'
 img: ''
 ---
 
-Have you ever heard about the popular BBC micro:bit? In this workshop we are going to work with BBC micro:bit and create a basis **Flappy Bird Game** using it. Check out the final project:point_down:
+Have you ever heard about the popular BBC micro:bit? In this workshop we are going to work with BBC micro:bit and create a basis **Flappy Bird Game** using it. Check out the final project.
 
 ![Final Project]()
 
@@ -57,4 +57,18 @@ The MakeCode programming environment uses JavaScript along with the Static [Type
 
 Let's start with adding the bird. We just have 25 LEDs. Don't expect more. We have to assume a blinking LED as a bird😂
 
-Create a new LED sprite pointing to the right.
+Create a new LED sprite pointing to the right. A sprite is like a little LED creature you can tell what to do.
+
+```js
+let bird: game.LedSprite = null
+bird = game.createSprite(0, 2)
+bird.set(LedSpriteProperty.Blink, 300)
+```
+
+A variable `bird` is declared in TypeScript. The syntax of declaring a varible in TypeScript is: `let identifier:data-type = value;`
+
+The `game.createSprite(x,y)` creates a sprite(our bird) in position (x, y) on the 5x5 grid of LEDs. Then we set our bird to blink every 300 milli seconds.
+
+You can see our bird flying like this:point_down:
+
+![blinking LED]()
