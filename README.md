@@ -51,6 +51,10 @@ Once you finish setting up, let's get going:rocket:
 
 ## JavaScript
 
+By default MakeCode open's a project with code blocks. At top of the window, switch to JavaScript.
+
+![JavaScript]()
+
 The MakeCode programming environment uses JavaScript along with the Static [TypeScript](https://www.typescriptlang.org/) language. Don't worry about TypeScript. It is super similar to JavaScript. We will use most of the micro:bit’s built-in JavaScript functions.
 
 ## Step-1
