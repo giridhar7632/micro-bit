@@ -61,6 +61,8 @@ The MakeCode programming environment uses JavaScript along with the Static [Type
 
 Let's start with adding the bird. We just have 25 LEDs. Don't expect more. We have to assume a blinking LED as a bird😂
 
+Don't mind about the previously existing code. 
+
 Create a new LED sprite pointing to the right. A sprite is like a little LED creature you can tell what to do.
 
 ```js
@@ -76,3 +78,23 @@ The `game.createSprite(x,y)` creates a sprite(our bird) in position (x, y) on th
 You can see our bird flying like this:point_down:
 
 ![blinking LED]()
+
+## Step-2
+
+Now let's create some controls.  We’ll control the bird by pressing the A button to go up or the B button to go down.
+
+Micro:bit has built-in [event handlers](https://makecode.microbit.org/reference/event-handler) that are associated with a particular event, such as "button A pressed".  `.onButtonPressed` handler works when button A or B is pressed, or A and B together. They are just like event listeners in JavaScript but with custom events.
+
+```js
+input.onButtonPressed(Button.A, function () {
+    bird.change(LedSpriteProperty.Y, -1)
+})
+input.onButtonPressed(Button.B, function () {
+    bird.change(LedSpriteProperty.Y, 1)
+})
+```
+
+Now when button any is pressed, the position of bird should change by 1 unit(up or down).
+
+![controls]()
+
