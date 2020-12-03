@@ -5,7 +5,7 @@ author: '@giridhar7632'
 img: ''
 ---
 
-Have you ever heard about the popular BBC micro:bit? In this workshop we are going to work with BBC micro:bit and create a basis **Flappy Bird Game** using it.:point_down:
+Have you ever heard about the popular BBC micro:bit? In this workshop we are going to work with BBC micro:bit and create a basis **Flappy Bird Game** using it. Check out the final project:point_down:
 
 ![Final Project]()
 
@@ -19,7 +19,7 @@ The objective is to direct a flying bird :bird:, which is moving continuously to
 
 Extremely basic knowledge of any programming language. We are going to use JavaScript to code our micro:bit.
 
-If you don't have the hardware, don't worry we will use stimulator in this workshop. [Makecode's](https://makecode.microbit.org) micro:bit simulator was excellent!
+If you don't have the hardware, don't worry we'll use stimulator in this workshop. [Makecode's](https://makecode.microbit.org) micro:bit simulator was excellent!
 
 ## Getting Started
 
@@ -31,7 +31,7 @@ A micro:bit can only do what you tell it to do. You can use different programmin
 
 On front face, it has 25 LEDs which we will use to display our game.
 
-These are the main parts of a micro:bit.:point_down:
+These are the main parts of a micro:bit:point_down:
 
 ![micro:bit parts]()
 
@@ -50,3 +50,11 @@ You should see something like this.
 Once you finish setting up, let's get going:rocket:
 
 ## JavaScript
+
+The MakeCode programming environment uses JavaScript along with the Static [TypeScript](https://www.typescriptlang.org/) language. Don't worry about TypeScript. It is super similar to JavaScript. We will use most of the micro:bit’s built-in JavaScript functions.
+
+## Step-1
+
+Let's start with adding the bird. We just have 25 LEDs. Don't expect more. We have to assume a blinking LED as a bird😂
+
+Create a new LED sprite pointing to the right.
