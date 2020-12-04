@@ -2,7 +2,7 @@
 name: 'micro:bit Flappy Bird'
 description: 'Create a basic Flappy Bird Game using BBC micro:bit'
 author: '@giridhar7632'
-img: ''
+img: 'https://cloud-ak4m6yygi.vercel.app/0final_output.gif'
 ---
 
 Have you ever heard about the popular BBC micro:bit? In this workshop we are going to work with BBC micro:bit and create a basis **Flappy Bird Game** using it. Check out the final project.
@@ -326,6 +326,10 @@ basic.forever(() => {
 
 If you are using hardware, click on the `Download` button and follow the instructions.
 
+You're all set. Now you can just play the game.
+
+![game](https://cloud-ak4m6yygi.vercel.app/0final_output.gif)
+
 That's it! You created a simple Flappy Bird game on a micro:bit. 
 
 ![well done](https://cloud-70aevdanf.vercel.app/8well_done.gif)
@@ -350,7 +354,7 @@ These are some examples from the makers of the micro:bit to inspire you.
 
 - Adding score: [Simple clicking game](https://makecode.microbit.org/_gmtb8R03YU6e)- Press button `A` as much as possible to increase the score. Press `B` to display the score and reset the score.
 
-- Using accelarometer: [micro:bit leveler](https://makecode.microbit.org/_6c4DEwFq7ftg) and [Egg and Spoon Race](https://makecode.microbit.org/_9Cr8duiXqhAd)
+- Using accelerometer: [micro:bit leveler](https://makecode.microbit.org/_6c4DEwFq7ftg) and [Egg and Spoon Race](https://makecode.microbit.org/_9Cr8duiXqhAd)
 
 - Playing music: [Simple tilt alarm](https://makecode.microbit.org/_K4x1HtAccTPu)
 
