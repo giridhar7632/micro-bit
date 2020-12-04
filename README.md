@@ -13,23 +13,23 @@ Here's the [demo/code](https://makecode.microbit.org/_i6g2xLFeTTfP).
 
 ## How to play...
 
-The objective is to direct a flying bird :bird:, which is moving continuously to the right, between sets of obstacles. If the player touches an obstacle, they lose. You can check original Flappy Bird Game [here](https://flappybird.io/).
+The objective is to direct a flying bird :bird: which is moving continuously to the right, between sets of obstacles. If the player touches an obstacle, they lose. You can check the original Flappy Bird Game [here](https://flappybird.io/).
 
 ## Prerequisites
 
 Extremely basic knowledge of any programming language. We are going to use JavaScript to code our micro:bit.
 
-If you don't have the hardware, don't worry we'll use stimulator in this workshop. [Makecode's](https://makecode.microbit.org) micro:bit simulator was excellent!
+If you don't have the hardware, don't worry we'll use a stimulator in this workshop. [Makecode's](https://makecode.microbit.org) micro:bit simulator was excellent!
 
 ## Getting Started
 
-Micro bit is a tiny piece of hardware with many features. It a pocket size computer which performs what you say. We have to write a computer program and upload it to micro:bit what to do. A micro USB cable is used to transfer the code from PC to micro:bit.
+A micro bit is a tiny piece of hardware with many features. It a pocket-size computer which performs what you say. We have to write a computer program and upload it to the micro:bit what to do. A micro USB cable is used to transfer the code from PC to micro:bit.
 
 ![micro:bit]()
 
-A micro:bit can only do what you tell it to do. You can use different programming languages to write program like [Makecode](https://makecode.microbit.org/), which you can use to code in code blocks or JavaScript. You can also use [Python](https://python.microbit.org/v/2) to program a micro:bit.
+A micro:bit can only do what you tell it to do. You can use different programming languages to write programs like [Makecode](https://makecode.microbit.org/), which you can use to code in code blocks or JavaScript. You can also use [Python](https://python.microbit.org/v/2) to program a micro:bit.
 
-On front face, it has 25 LEDs which we will use to display our game.
+On the front face, it has 25 LEDs which we will use to display our game.
 
 These are the main parts of a micro:bit:point_down:
 
@@ -51,11 +51,11 @@ Once you finish setting up, let's get going:rocket:
 
 ## JavaScript
 
-By default MakeCode open's a project with code blocks. At top of the window, switch to JavaScript.
+By default, MakeCode open's a project with code blocks. At top of the window, switch to JavaScript.
 
 ![JavaScript]()
 
-The MakeCode programming environment uses JavaScript along with the Static [TypeScript](https://www.typescriptlang.org/) language. Don't worry about TypeScript. It is super similar to JavaScript. We will use most of the micro:bit’s built-in JavaScript functions. For example, `showString()` function displays a string on the LED screen. It will scroll to left if it’s bigger than the screen.
+The MakeCode programming environment uses JavaScript along with the Static [TypeScript](https://www.typescriptlang.org/) language. Don't worry about TypeScript. It is super similar to JavaScript. We will use most of the micro:bit’s built-in JavaScript functions. For example, the `showString()` function displays a string on the LED screen. It will scroll to the left if it’s bigger than the screen.
 
 Try displaying your name. Here's mine: 😊
 
@@ -81,7 +81,7 @@ bird.set(LedSpriteProperty.Blink, 300)
 
 A variable `bird` is declared in TypeScript. The syntax of declaring a varible in TypeScript is: `let identifier:data-type = value;`
 
-The `game.createSprite(x,y)` creates a sprite(our bird) in position (x, y) on the 5x5 grid of LEDs. Then we set our bird to blink every 300 milli seconds.
+The `game.createSprite(x,y)` creates a sprite(our bird) in position (x, y) on the 5x5 grid of LEDs. Then we set our bird to blink every 300 milliseconds.
 
 You can see our bird flying like this:point_down:
 
@@ -102,7 +102,7 @@ input.onButtonPressed(Button.B, function () {
 })
 ```
 
-Now when button any is pressed, the position of bird should change by 1 unit(up or down).
+Now when button any is pressed, the position of the bird should change by 1 unit(up or down).
 
 ![controls]()
 
@@ -112,7 +112,7 @@ Let's create some randomly generated obstacles for the bird to crash💥
 
 We’ll keep all obstacles inside an array. All obstacles will have a single hole for the bird to fly through.
 
-First, create an array of `obstacles` which will hold all of the obstacle sprites.
+First, create an array of `obstacles` that will hold all of the obstacle sprites.
 
 ```js
 let obstacles: game.LedSprite[] = []
@@ -127,7 +127,7 @@ let obstacles: game.LedSprite[] = []
 emptyObstacleY = randint(0, 4)
 ```
 
-Using `for` loop, iterate from 0 to 4. For every coordinate not equal to `emptyObstacleY` create and add obstacle sprites to the end of the obstacles array using `push()` method.
+Using the `for` loop, iterate from 0 to 4. For every coordinate not equal to `emptyObstacleY` create and add obstacle sprites to the end of the obstacles array using the `push()` method.
 
 ```js
 let emptyObstacleY = 0
@@ -164,13 +164,13 @@ basic.forever(() => {
 })
 ```
 
-Here, `basic.pause()` pauses the program for 1000 milliseconds(i.e., 1 second). Now obstacles should move towards left every second.
+Here, `basic.pause()` pauses the program for 1000 milliseconds(i.e., 1 second). Now obstacles should move towards the left every second.
 
 ![moving obstacles]()
 
 ## Step-5
 
-Now let's make obstacles disappear after reaching leftmost corner. Iterate over all obstacles, delete the obstacle sprites where the `X` coordinate equals `0`, and remove them from the `obstacles` array. `get(property: LedSpriteProperty)` is used to know about the properties of a sprite.
+Now let's make obstacles disappear after reaching the leftmost corner. Iterate over all obstacles, delete the obstacle sprites where the `X` coordinate equals `0`, and remove them from the `obstacles` array. `get(property: LedSpriteProperty)` is used to know about the properties of a sprite.
 
 ```js
 let obstacles: game.LedSprite[] = []
@@ -187,7 +187,7 @@ basic.forever(() => {
 })
 ```
 
-Now you see that, when the obstacle reaches the bird it will just dissappear.
+Now you see that when the obstacle reaches the bird it will just disappear.
 
 ![disappearing obstacle]()
 
@@ -239,15 +239,15 @@ basic.forever(() => {
 })
 ```
 
-Now you can see obstacles created with spaces and moving towars left.
+Now you can see obstacles created with spaces and moving towards the left.
 
 ![Moving left]()
 
 ## Step-7
 
-We are now at the last part of creating Flappy Bird game. 
+We are now in the last part of creating the Flappy Bird game. 
 
-Right now nothing happens when the bird is hit by obstacle. We should end the game when the bird crashes into an obstacle. The built-in function `gameover()` ends the game and show some cool animations. 
+Right now nothing happens when the bird is hit by an obstacle. We should end the game when the bird crashes into an obstacle. The built-in function `gameover()` ends the game and show some cool animations. 
 
 To do this, we have to iterate over the `obstacles` array and checking if any `obstacle` sprite coordinate equals the `bird` coordinate. Then we call `gameover()` function.
 
@@ -271,7 +271,7 @@ basic.forever(() => {
 })
 ```
 
-Now the game ends when the bird is hit by obstacle.
+Now the game ends when the bird is hit by an obstacle.
 
 ![Game over]()
 
@@ -320,7 +320,7 @@ basic.forever(() => {
 
 ## Step-8
 
-If you are using hardware, click on `Download` button and follow the instructions.
+If you are using hardware, click on the `Download` button and follow the instructions.
 
 That's it! You created a simple Flappy Bird game on a micro:bit. 
 
@@ -335,13 +335,13 @@ It's time for you to take charge.
 
 - Try to make the obstacles move faster every time an obstacle is passed.
 
-- We can play music using micro:bit. You can explore it [here](https://makecode.microbit.org/reference/music/play-tone). Try to add sound when the bird is hit by obstacle.
+- We can play music using the micro:bit. You can explore it [here](https://makecode.microbit.org/reference/music/play-tone). Try to add sound when the bird is hit by an obstacle.
 
-- As said, micro:bit is wonderful. It has so many built-in sensors. Accelerometer can check how the micro:bit is moving. Try to control the bird by tilting the micro:bit. You can use `input.rotate()` function to find how much the micro:bit is tilted in different directions. You can learn more [here](https://makecode.microbit.org/reference/input/rotation).
+- As said, micro:bit is wonderful. It has so many built-in sensors. An accelerometer can check how the micro:bit is moving. Try to control the bird by tilting the micro:bit. You can use the `input.rotate()` function to find how much the micro:bit is tilted in different directions. You can learn more [here](https://makecode.microbit.org/reference/input/rotation).
 
 ## Inspiration
 
-These are some examples from the makers of micro:bit to inspire you.
+These are some examples from the makers of the micro:bit to inspire you.
 
 
 - Adding score: [Simple clicking game](https://makecode.microbit.org/_gmtb8R03YU6e)- Press button `A` as much as possible to increase the score. Press `B` to display the score and reset the score.
@@ -351,3 +351,5 @@ These are some examples from the makers of micro:bit to inspire you.
 - Playing music: [Simple tilt alarm](https://makecode.microbit.org/_K4x1HtAccTPu)
 
 PS: I'm [@Giridhar](https://hackclub.slack.com/team/U013E6KE9UJ) on Slack!
+
+
