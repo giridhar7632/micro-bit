@@ -324,6 +324,8 @@ If you are using hardware, click on `Download` button and follow the instruction
 
 That's it! You created a simple Flappy Bird game on a micro:bit. 
 
+![well done]()
+
 ## Hacking 
 
 It's time for you to take charge.
